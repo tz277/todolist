@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tz277/todolist/issues"
   },
-  "homepage": "https://github.com/tz277/todolist#readme"
+  "homepage": "https://github.com/tz277/todolist#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
 }
