@@ -36,3 +36,7 @@ tsconfig.json
   "include": ["src/**/*"]
 }
 ```
+
+```bash
+npm install react react-dom
+```
