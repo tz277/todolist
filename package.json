@@ -1,0 +1,20 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "A todolist",
+  "main": "server.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tz277/todolist.git"
+  },
+  "author": "Timothy Zhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tz277/todolist/issues"
+  },
+  "homepage": "https://github.com/tz277/todolist#readme"
+}
