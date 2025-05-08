@@ -17,3 +17,11 @@ npm install typescript --save-dev
 ```
 
 .gitignore
+
+tsconfig.json (files)
+
+```bash
+npx tsc
+
+npm start
+```

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tz277/todolist#readme",
   "devDependencies": {
+    "@types/node": "^22.15.15",
     "typescript": "^5.8.3"
   }
 }
