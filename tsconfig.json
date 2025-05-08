@@ -1,3 +1,6 @@
 {
-  "files": ["server.ts", "test.ts"]
+  "compilerOptions": {
+    "outDir": "build"
+  },
+  "include": ["src/**/*"]
 }

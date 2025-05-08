@@ -4,8 +4,9 @@
   "description": "A todolist",
   "main": "server.js",
   "scripts": {
-    "test": "node test.js",
-    "start": "node server.js"
+    "test": "node build/test.js",
+    "start": "node build/server.js",
+    "prestart": "npx tsc"
   },
   "repository": {
     "type": "git",

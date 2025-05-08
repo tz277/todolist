@@ -25,3 +25,14 @@ npx tsc
 
 npm start
 ```
+
+tsconfig.json
+
+```JSON
+{
+  "compilerOptions": {
+    "outDir": "build"
+  },
+  "include": ["src/**/*"]
+}
+```
