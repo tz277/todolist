@@ -1,21 +1,31 @@
 import { createServer } from "node:http";
+import * as fs from "fs";
 
-const LOCAL_ADDRESS = {
-  port: 3010,
-  host: "127.0.0.1",
-};
+const LOCAL_PORT = 3110;
+const LOCAL_URL = new URL(`http://127.0.0.1:${LOCAL_PORT}`);
+
+const PATH_TO_INDEX_HTML = "public/index.html";
 
 const server = createServer((req, res) => {
-  res.writeHead(200, { "content-type": "text/plain" });
-  res.end("Hello world!");
+  fs.readFile(PATH_TO_INDEX_HTML, (err, data) => {
+    if (err) {
+      res.writeHead(404, { "content-type": "text/plain" });
+      res.end("404 Not Found");
+    } else {
+      res.writeHead(200, { "content-type": "text/html" });
+      res.end(data);
+    }
+  });
 });
 
-function main() {
-  server.listen(LOCAL_ADDRESS.port, LOCAL_ADDRESS.host, () => {
-    console.log(
-      `Listening on http://${LOCAL_ADDRESS.host}:${LOCAL_ADDRESS.port}`
-    );
+function listen(url: URL) {
+  server.listen(Number(url.port), url.hostname, () => {
+    console.log(`Listening on ${url.toString()}`);
   });
+}
+
+function main() {
+  listen(LOCAL_URL);
 }
 
 main();
